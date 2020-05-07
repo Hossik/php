@@ -20,13 +20,13 @@ if (isset($_POST['cancle'])){
     $msg = validateProfile();
     if ( is_string($msg) ){
       $_SESSION['error'] = $msg;
-      header('location: add.php?profile_id=');
+      header('location: edit.php?profile_id='.$_GET['profile_id']);
       return;
     }
     $msg = validatePos();
     if ( is_string($msg) ){
       $_SESSION['error'] = $msg;
-      header('location: add.php?profile_id=');
+      header('location: edit.php?profile_id='.$_GET['profile_id']);
       return;
     }
 
